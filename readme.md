@@ -9,19 +9,27 @@
 
 `git clone https://github.com/bambattajb/policing-people.git`
 
+- Download `npm_modules`
+
+`cd site && npm install`
+
 - Make sure Gatsby is installed and run - 
 
-`gatsby develop`
+`cd site && gatsby develop`
 
 - To build a production version run - 
 
-`gatsby build`
+`cd site && gatsby build`
 
 - To deploy to S3 run - 
 
-`npm run deploy`
+`cd site && npm run deploy`
 
 ### Server
+- Download `node_modules`
+
+`cd server/register && npm install`
+
 - Deploy the Serverless function make sure The Serverless Framework is installed and run - 
 
 `cd server/register && sls deploy`
