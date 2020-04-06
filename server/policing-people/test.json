@@ -1,0 +1,11 @@
+{
+  "body" : {
+    "EMAIL": "test@white-fire.co.uk",
+    "EMAILMATCH" : "test@white-fire.co.uk",
+    "FNAME": "Joe",
+    "LNAME": "Buckle",
+    "POSTCODE": "SP2 7LE",
+    "COUNTRY": "UK",
+    "STATUS": "looking"
+  }
+}

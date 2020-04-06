@@ -1,0 +1,9 @@
+.pentagon {
+  width: 200px;
+  height: 200px;
+  margin:0 auto $column-spacing auto;
+  background-color: $grey2;
+  background-size: 100%;
+  -webkit-clip-path: polygon(50% 0%, 100% 38.2%, 80.9% 100%, 19.1% 100%, 0% 38.2%);
+  clip-path: polygon(50% 0%, 100% 38.2%, 80.9% 100%, 19.1% 100%, 0% 38.2%);
+}

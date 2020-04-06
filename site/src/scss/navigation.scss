@@ -1,0 +1,180 @@
+.nav-wrapper {
+  position:relative;
+
+  .register-button {
+    float:right;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-wrapper {
+    .register-button {
+      display:none;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-wrapper {
+    display:flex;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+
+    .register-button {
+      float: none;
+    }
+  }
+}
+
+.navigation {
+  display:flex;
+  height:100%;
+  align-items: center;
+  justify-content: flex-end;
+  clear:right;
+  padding-top:($column-spacing / 2);
+  margin-bottom:($column-spacing / 2);
+
+  ul {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+
+    li {
+      margin:0 0 0 ($column-spacing);
+      padding:0;
+      float: left;
+    }
+
+    a {
+      color:$font-body-colour;
+      text-decoration:none;
+      position:relative;
+
+      &:hover {
+        color:$brand2;
+      }
+
+      &.active {
+        &:after {
+          width:110%;
+          margin-left:-5%;
+          content:"";
+          height:2px;
+          background:$font-body-colour;
+          position:absolute;
+          bottom:-5px;
+          left:0;
+        }
+      }
+    }
+  }
+}
+
+.bm-item-list {
+  a.menu-item {
+    display:block;
+    color:white;
+    font-size:$h3-size;
+    line-height:$h3-lineheight;
+    text-decoration:none;
+    padding:$column-spacing/ 2 0;
+
+    &:hover {
+      color:$brand2;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .bm-burger-button {
+    display:block;
+  }
+  .navigation {
+    display:none;
+  }
+}
+
+@media (min-width: 901px) {
+  .navigation {
+    display:flex;
+  }
+  .bm-burger-button {
+    display:none;
+  }
+}
+
+  /** Burget **/
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 20px;
+  z-index:9999;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top:0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 0;
+  font-size: 1.15em;
+  .register-button {
+    display:block;
+  }
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  top:0;
+}

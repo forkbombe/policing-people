@@ -1,0 +1,35 @@
+header.main-header {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:white;
+  z-index:999;
+}
+
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+@media (max-width: 576px) {
+  header.main-header {
+    text-align:center;
+  }
+
+
+  .headroom {
+    transition:none;
+  }
+
+  .headroom--unpinned, .headroom--pinned {
+    position:fixed;
+    transform: none !important;
+  }
+}

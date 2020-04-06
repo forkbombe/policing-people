@@ -1,0 +1,263 @@
+body {
+  font-size:$base-font-size;
+  line-height:$base-font-lineheight;
+  color:$font-body-colour;
+}
+
+main {
+  opacity:0;
+  transition:opacity .25s ease;
+
+  &.show {
+    opacity:1;
+  }
+}
+
+a {
+  transition:all .5s ease;
+}
+
+section {
+  padding:$column-spacing 0;
+}
+
+img {
+  max-width:100%;
+}
+
+.box-padding {
+  padding:$column-spacing;
+  box-sizing:border-box;
+
+  &.top-bottom {
+    padding-left:0;
+    padding-right:0;
+  }
+
+  &.right-only {
+    padding-top:0;
+    padding-left:0;
+    padding-bottom:0;
+  }
+
+  &.left-only {
+    padding-top:0;
+    padding-right:0;
+    padding-bottom:0;
+  }
+}
+
+@media (max-width: 575px) {
+  .box-padding {
+    &.right-only {
+      padding:0;
+    }
+
+    &.left-only {
+      padding:0;
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .box-padding {
+
+  }
+}
+
+.s-container {
+  max-width:$site-maxwidth;
+  margin:0 auto;
+  padding:0 $column-spacing;
+  box-sizing:border-box;
+}
+
+.button {
+  background-color:$brand2;
+  padding:10px $column-spacing;
+  border-radius:5px;
+  color:white;
+  font-family:"Red Hat Display", sans-serif;
+  font-weight:bold;
+  text-decoration:none;
+  font-size:$h4-size;
+
+  &:hover {
+    background-color:darken($brand2, 10%);
+  }
+
+  &.white {
+    background-color:white;
+    color:$font-body-colour;
+
+    &:hover {
+      background-color:lighten($font-body-colour, 95%);
+    }
+  }
+}
+
+.underline {
+  position:relative;
+  display:inline-block;
+  padding-bottom:$column-spacing / 2;
+
+  &:after {
+    content:"";
+    height:3px;
+    background-color:white;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-weight:normal;
+}
+
+h1, .h1 {
+  font-size:$h1-size;
+  font-weight:bold;
+  line-height:$h1-lineheight;
+}
+
+h2, .h2 {
+  font-size:$h2-size;
+  line-height:$h2-lineheight;
+}
+
+h3 {
+  font-size:$h3-size;
+  line-height:$h3-lineheight;
+}
+
+h4 {
+  font-size:$h4-size;
+  line-height:$h4-lineheight;
+}
+
+h5 {
+  font-size:$h5-size;
+  line-height:$h5-lineheight;
+  font-weight:bold;
+  text-transform:uppercase;
+  color:$shade3;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size:$h1-size - 10
+  }
+  h2 {
+    font-size:$h2-size - 5;
+  }
+  h3 {
+    font-size:$h3-size - 5;
+  }
+}
+
+.clear {
+  clear:both;
+}
+
+.color-brand1 {
+  color:$brand1;
+}
+
+.color-brand2 {
+  color:$brand2;
+}
+
+.color-red {
+  color:$red;
+}
+
+.bg-brand1 {
+  background:$brand1;
+}
+
+.bg-brand2 {
+  background:$brand2;
+}
+
+.bg-shade1 {
+  background:$shade1;
+}
+
+.bg-shade2 {
+  background:$shade2;
+}
+
+.bg-shade3 {
+  background:$shade3;
+}
+
+.bg-shade4 {
+  background:$shade4;
+}
+
+.bg-shade5 {
+  background:$shade5;
+}
+
+.bg-grey1 {
+  background:$grey1;
+}
+
+.bg-pattern {
+  background:url('/pattern.png') white;
+}
+
+.panel {
+  background: linear-gradient(to left, $brand2  50%, $shade5 50%);
+  padding:$column-spacing 0;
+
+  .panelRight {
+    color:white;
+  }
+
+  p:last-of-type {
+    margin-bottom:0;
+    padding-bottom:0;
+  }
+}
+@media (max-width: 767px) {
+  .panel {
+    background:transparent;
+
+    .panelLeft, .panelRight {
+      padding:$column-spacing;
+    }
+
+    .panelLeft {
+      background:$shade5;
+      margin-bottom:$column-spacing;
+    }
+
+    .panelRight {
+      background:$brand2;
+    }
+  }
+}
+
+.aligncenter {
+  text-align:center;
+}
+
+.alignleft {
+  text-align:left;
+}
+
+.alignmiddle {
+  display:flex;
+  align-items:center;
+  width:100%;
+  height:100%;
+}
+
+.shadow {
+  background:white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}

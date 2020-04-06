@@ -1,0 +1,41 @@
+// Layout
+$site-maxwidth : 1200px;
+
+// Formatting
+$base-font-size: 17px;
+$base-font-lineheight: 1.5em;
+$h1-size : 45px;
+$h2-size : 30px;
+$h3-size : 22px;
+$h4-size : 18px;
+$h5-size : 22px;
+$h1-lineheight : 1.2em;
+$h2-lineheight : 1.2em;
+$h3-lineheight : 1.4em;
+$h4-lineheight : 1.2em;
+$h5-lineheight : 1.2em;
+
+// Spacing
+$column-spacing : 30px;
+
+// Colours
+$brand1 : #133069;
+$brand2 : #EE8F31;
+
+$shade1 : $brand1;
+$shade2 : #4D6DAD;
+$shade3 : #639EA1;
+$shade4 : #5D8EC6;
+$shade5 : #C1D8F2;
+
+$grey1 : #f7f7f7;
+$grey2 : #d7d7d7;
+
+$red : red;
+
+$font-body-colour : #333;
+
+:export {
+  brand1 : $brand1;
+  brand2 : $brand2;
+}
