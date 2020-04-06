@@ -78,6 +78,8 @@ module.exports.submit = async event => {
         }
     }
 
+    delete(body.TERMS);
+
     if(Object.keys(errors).length === 0 && errors.constructor === Object) {
         try {
             response = await mailchimp.post('/lists/'+process.env.MC_LIST_ID+'/members', {
@@ -87,6 +89,7 @@ module.exports.submit = async event => {
             });
         } catch(e) {
             response['exists'] = "It appears as though you are already registered using " + body.EMAIL
+            response['e'] = e;
         }
 
     } else {

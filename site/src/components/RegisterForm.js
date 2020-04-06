@@ -20,15 +20,15 @@ class RegisterForm extends React.Component {
         "https://5rc69sg2j8.execute-api.eu-west-2.amazonaws.com/dev/submit";
 
     state = {
-        FNAME : false,
-        LNAME : false,
-        EMAIL : false,
-        EMAILMATCH : false,
-        PHONE : false,
-        BIRTHDAY : false,
-        POSTCODE  : false,
-        COUNTRY : false,
-        INFO : false,
+        FNAME : '',
+        LNAME : '',
+        EMAIL : '',
+        EMAILMATCH : '',
+        PHONE : '',
+        BIRTHDAY : '',
+        POSTCODE  : '',
+        COUNTRY : '',
+        INFO : '',
         STATUS : 'existing',
         TERMS : false,
       //  EXPERIENCE : [],
@@ -58,6 +58,8 @@ class RegisterForm extends React.Component {
                     });
 
                 response = await response.json();
+
+                console.log(response);
 
                 if(response.body.response.errors) {
                     document
