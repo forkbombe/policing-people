@@ -79,6 +79,7 @@ module.exports.submit = async event => {
     }
 
     delete(body.TERMS);
+    body.SKILLS = body.SKILLS.join(", ");
 
     if(Object.keys(errors).length === 0 && errors.constructor === Object) {
         try {

@@ -22,7 +22,7 @@ const Info = () => (
                 <Col lg={3} md={6} sm={12}>
                     <div className="infoBox bg-shade2">
                         <div className="box-padding">
-                            <h3>Support police forces</h3>
+                            <h3>Support Police forces</h3>
                             <p>
                                 We are working at pace with relevant policing
                                 bodies, initially in the United Kingdom, to ensure

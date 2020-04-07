@@ -191,30 +191,29 @@ const PoliceForcesPage = () => (
                                     On setup, the identity of the candidate is verified.
                                     The nature of this validation can be set by the Force,
                                     but the usual validation approach is via passport,
-                                    identity card or photo driving licence
+                                    identity card or photo driving licence.
                                 </p>
                                 <p>
                                     The photo ID is photographed, and then uploaded into the system.
                                     The candidate is then videoed (to ensure that a real person is
-                                    behind the validation attempt)
+                                    behind the validation attempt).
                                 </p>
                                 <p>
                                     The video of the face is then matched to the passport application photo,
                                     and identity validated. This is a proven approach, with over 50
-                                    forensic tests completed on the face and document
+                                    forensic tests completed on the face and document.
                                 </p>
                                 <p>
                                     Proof of address documentation is usually bank statement or utility bill
-                                    from the last three months, with this cross referenced to electoral roll information
+                                    from the last three months, with this cross referenced to electoral roll information.
                                 </p>
                                 <p>
                                     The Force can specify, by role, additional validation documentation that is
-                                    required (e.g. educational certificates, professional memberships etc)
+                                    required (e.g. educational certificates, professional memberships etc).
                                 </p>
                                 <p>
                                     The service has been deployed in the United Kingdom's National Health Service,
                                     who have stringent validation requirements around ID and qualifications.
-                                    We are confident we can meet the requirements of Police Forces
                                 </p>
                             </div>
                         </Col>

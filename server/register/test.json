@@ -1,12 +1,13 @@
 {
   "body" : {
-    "EMAIL": "berek30171@smlmail.com",
-    "EMAILMATCH" : "berek30171@smlmail.com",
+    "EMAIL": "ber30171@smlmail.com",
+    "EMAILMATCH" : "ber30171@smlmail.com",
     "FNAME": "Joe",
     "LNAME": "Buckle",
     "POSTCODE": "SP2 7LE",
     "COUNTRY": "UK",
     "STATUS": "looking",
+    "SKILLS" : [],
     "TERMS" : true
   }
 }

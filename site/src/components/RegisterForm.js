@@ -31,10 +31,12 @@ class RegisterForm extends React.Component {
         INFO : '',
         STATUS : 'existing',
         TERMS : false,
+        SKILLS : [],
       //  EXPERIENCE : [],
         errors : false,
         working : false,
-        success : false
+        success : false,
+
     };
 
     submit = async(e) => {
@@ -84,26 +86,28 @@ class RegisterForm extends React.Component {
         let {name, value, checked, type} = e.target;
 
         if(type==='checkbox') {
-            name = "TERMS";
-
-            if(checked) {
-                value = true
-            } else {
-                value = false;
-            }
-
-            /*let { experience } = this.state;
-
-            if(checked) {
-                experience.push(value);
-            } else {
-                const index =
-                    experience.indexOf(value);
-                if (index > -1) {
-                    experience.splice(index, 1);
+            if(name==='TERMS') {
+                if (checked) {
+                    value = true
+                } else {
+                    value = false;
                 }
             }
-            value = experience; */
+
+            if(name==='SKILLS') {
+                let { SKILLS } = this.state;
+
+                if (checked) {
+                    SKILLS.push(value);
+                } else {
+                    const index =
+                        SKILLS.indexOf(value);
+                    if (index > -1) {
+                        SKILLS.splice(index, 1);
+                    }
+                }
+                value = SKILLS;
+            }
         }
 
         this.setState({[name] : value});
@@ -196,7 +200,9 @@ class RegisterForm extends React.Component {
                     label="Date of birth"
                     type="date"
                     variant="filled"
-                    name="BIRTHDAY"
+                    InputLabelProps={{
+                        shrink: true,
+                    }}                    name="BIRTHDAY"
                     onChange={this.inputChange}
                 />
             </FormControl>
@@ -237,11 +243,14 @@ class RegisterForm extends React.Component {
             <FormControl component="fieldset" fullWidth style={{marginBottom:20}}>
                 <TextField
                     multiline
-                    rows={10}
+                    rows={4}
                     id="filled-required"
-                    label="Information relevant to position sought"
+                    label="Any additional information you feel helpful to provide (200 characters max)"
                     variant="filled"
                     name="INFO"
+                    inputProps={{
+                        maxLength : 200
+                    }}
                     onChange={this.inputChange}
                 />
             </FormControl>
@@ -263,24 +272,24 @@ class RegisterForm extends React.Component {
             </section>
 
 
-            { /* <section>
-                <FormLabel component="legend">Experience in the following:</FormLabel>
+            {  <section>
+                <FormLabel component="legend">
+                    What you are available for:<br />
+                    <small>Select all that apply</small>
+                </FormLabel>
                 <FormGroup>
-                    <FormControlLabel name="EXPERIENCE" value="Detective" control={<Checkbox onChange={this.inputChange} />} label="Detective" />
-                    <FormControlLabel name="EXPERIENCE" value="Training" control={<Checkbox onChange={this.inputChange} />} label="Training" />
-                    <FormControlLabel name="EXPERIENCE" value="HOLMES2" control={<Checkbox onChange={this.inputChange}  />} label="HOLMES2" />
-                    <FormControlLabel name="EXPERIENCE" value="Child Protection" control={<Checkbox onChange={this.inputChange}  />} label="Child Protection" />
-                    <FormControlLabel name="EXPERIENCE" value="SOCO" control={<Checkbox onChange={this.inputChange}  />} label="SOCO" />
-                    <FormControlLabel name="EXPERIENCE" value="Intelligence Analysis" control={<Checkbox onChange={this.inputChange}  />} label="Intelligence Analysis" />
-                    <FormControlLabel name="EXPERIENCE" value="Digital Forensics" control={<Checkbox onChange={this.inputChange}  />} label="Digital Forensics" />
-                    <FormControlLabel name="EXPERIENCE" value="PNC" control={<Checkbox onChange={this.inputChange}  />} label="PNC" />
-                    <FormControlLabel name="EXPERIENCE" value="MIR" control={<Checkbox onChange={this.inputChange}  />} label="MIR" />
-                    <FormControlLabel name="EXPERIENCE" value="Cyber Crime" control={<Checkbox onChange={this.inputChange}  />} label="Cyber Crime" />
-                    <FormControlLabel name="EXPERIENCE" value="Event Security" control={<Checkbox onChange={this.inputChange}  />} label="Event Security" />
-                    <FormControlLabel name="EXPERIENCE" value="Forensics" control={<Checkbox  onChange={this.inputChange} />} label="Forensics" />
-                    <FormControlLabel name="EXPERIENCE" value="Family Liaison" control={<Checkbox onChange={this.inputChange}  />} label="Family Liaison" />
+                    <FormControlLabel name="SKILLS" value="Communications" control={<Checkbox onChange={this.inputChange} />} label="Communications" />
+                    <FormControlLabel name="SKILLS" value="Community support" control={<Checkbox onChange={this.inputChange} />} label="Community support" />
+                    <FormControlLabel name="SKILLS" value="Call handling" control={<Checkbox onChange={this.inputChange}  />} label="Call handling" />
+                    <FormControlLabel name="SKILLS" value="Enforcement support" control={<Checkbox onChange={this.inputChange}  />} label="Enforcement support" />
+                    <FormControlLabel name="SKILLS" value="ICT support" control={<Checkbox onChange={this.inputChange}  />} label="ICT support" />
+                    <FormControlLabel name="SKILLS" value="Investigation support" control={<Checkbox onChange={this.inputChange}  />} label="Investigation support" />
+                    <FormControlLabel name="SKILLS" value="Policy development" control={<Checkbox onChange={this.inputChange}  />} label="Policy development" />
+                    <FormControlLabel name="SKILLS" value="Statement taking" control={<Checkbox onChange={this.inputChange}  />} label="Statement taking" />
+                    <FormControlLabel name="SKILLS" value="Training" control={<Checkbox onChange={this.inputChange}  />} label="Training" />
+                    <FormControlLabel name="SKILLS" value="Other" control={<Checkbox onChange={this.inputChange}  />} label="Other" />
                 </FormGroup>
-            </section> */ }
+            </section> }
 
             <section>
                 <FormControl error={!!errors.TERMS}>
