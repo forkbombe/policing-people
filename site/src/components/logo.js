@@ -3,7 +3,7 @@ import PageLink from "./PageLink"
 
 const Logo = () => (
     <div className="logo">
-        <PageLink to="/" content={<img src={'/logo.svg'} alt="Policing People" />} />
+        <PageLink to="/" content={<img src={'/logo.png'} alt="Policing People" />} />
     </div>
 );
 

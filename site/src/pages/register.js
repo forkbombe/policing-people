@@ -15,20 +15,6 @@ const RegisterPage = () => (
                         <Col mdOffset={2} sm={12} md={8}>
                             <div className="shadow" id="register-form">
                                 <div className="box-padding">
-                                    <div className="aligncenter">
-                                    <Crosshead
-                                        align="center"
-                                        text={[<b>Register</b>, ' your details']} />
-
-                                        <p>
-                                            By completing and submitting this form, you give Policing
-                                            People Ltd permission to store and use your data in compliance
-                                            with local laws and regulations; to seek further information
-                                            from you, relevant to Policing People providing contract staff
-                                            to forces worldwide; and to contact you with details of suitable
-                                            vacancies as they arise.
-                                        </p>
-                                    </div>
                                     <section>
                                         <RegisterForm />
                                     </section>

@@ -172,7 +172,7 @@ const PoliceForcesPage = () => (
                         <div className="alignmiddle aligncenter box-padding right-only">
                             <div>
                                 <div className="h2 color-brand1">
-                                    <b>FACIAL RECOGNITION LIVENESS CHECKING</b>
+                                    <b>FACIAL RECOGNITION "LIVE-NESS" CHECKING</b>
                                 </div>
                                 <br />
                                 <img src={'/facial-recognition.png'} alt='' />

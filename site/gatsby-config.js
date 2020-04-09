@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -35,7 +35,7 @@ module.exports = {
         background_color: `#133069`,
         theme_color: `#133069`,
         display: `minimal-ui`,
-        icon: `src/images/100x100.png`, // This path is relative to the root of the site.
+        icon: `static/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -47,8 +47,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: "policing-people-site",
-        protocol: "https",
+        bucketName: "policingpeople.com",
+        protocol: "http",
         hostname: "www.policingpeople.com"
       },
     },

@@ -13,6 +13,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Crosshead from "./Crosshead";
 
 class RegisterForm extends React.Component {
 
@@ -133,6 +134,18 @@ class RegisterForm extends React.Component {
 
         return(
         <form  noValidate>
+            <Crosshead
+                align="center"
+                text={[<b>Register</b>, ' your details']} />
+
+            <p>
+                By completing and submitting this form, you give Policing
+                People Ltd permission to store and use your data in compliance
+                with local laws and regulations; to seek further information
+                from you, relevant to Policing People providing contract staff
+                to forces worldwide; and to contact you with details of suitable
+                vacancies as they arise.
+            </p>
             {(errors ?
                 <h3 className="color-red">There are errors in the form. <br />Please correct.</h3>
                 :
@@ -296,7 +309,7 @@ class RegisterForm extends React.Component {
                     <FormGroup>
                         <FormControlLabel
                             control={<Checkbox name="TERMS" onChange={this.inputChange}  />}
-                            label="I accept your privacy conditions."
+                            label={["I accept your ", <a href={'/PolicingPeople privacy policy2020.pdf'} target="_blank">privacy conditions.</a>]}
                         />
                     </FormGroup>
                     {(errors.TERMS ? <FormHelperText>&nbsp;&nbsp;&nbsp;&nbsp;{errors.TERMS}</FormHelperText> : false)}
