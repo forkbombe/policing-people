@@ -14,7 +14,7 @@ const WhoWeAre = () => (
                 </Col>
             </Row>
             <Row>
-                <Col md={4} sm={12}>
+                <Col md={6} sm={6}>
                     <div className="box-padding">
                         {/*<Pentagon />*/}
                         <h5>IAN TOMSON-SMITH</h5>
@@ -26,9 +26,9 @@ const WhoWeAre = () => (
                         </p>
                     </div>
                 </Col>
-                <Col md={4} sm={12}>
+                { /* <Col md={4} sm={12}>
                     <div className="box-padding">
-                        {/*<Pentagon />*/}
+
                         <h5>SARAH BAILEY</h5>
                         <h3>Director, Recruitment and HR</h3>
                         <p>
@@ -38,8 +38,8 @@ const WhoWeAre = () => (
                             HR at JP Morgan and Friends Provident.
                         </p>
                     </div>
-                </Col>
-                <Col md={4} sm={12}>
+                </Col> */ }
+                <Col md={6} sm={6}>
                     <div className="box-padding">
                         {/*<Pentagon />*/}
                         <h5>BERNARD RIX</h5>
